@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', Arial, sans-serif;
+  background: #0f0f13;
+  color: #e2e2e8;
+}
+
+/* ── Nav ── */
+nav {
+  height: 52px;
+  width: 100%;
+  background: #16161d;
+  border-bottom: 1px solid #2a2a35;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+nav a {
+  color: #e2e2e8;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.15s;
+}
+
+nav a:hover {
+  color: #f03e3e;
+}
+
+/* ── Layout ── */
+.reddit-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 300px;
+  width: 100%;
+  min-height: calc(100vh - 52px);
+}
+
+/* ── Sidebars ── */
+.left-sidebar,
+.right-sidebar {
+  background: #16161d;
+  border-right: 1px solid #2a2a35;
+  padding: 20px 16px;
+  height: calc(100vh - 52px);
+  position: sticky;
+  top: 52px;
+  overflow-y: auto;
+}
+
+.right-sidebar {
+  border-right: none;
+  border-left: 1px solid #2a2a35;
+}
+
+.left-sidebar a,
+.left-sidebar p {
+  display: block;
+  color: #c0c0d0;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 7px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.12s, color 0.12s;
+}
+
+.left-sidebar a:hover,
+.left-sidebar p:hover {
+  background: #1e1e2a;
+  color: #f03e3e;
+}
+
+/* ── Main Feed ── */
+.main-feed {
+  min-width: 0;
+  padding: 20px 24px;
+  background: #0f0f13;
+}
+
+.feed-header {
+  display: flex;
+  gap: 4px;
+  background: #16161d;
+  border: 1px solid #2a2a35;
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 14px;
+}
+
+.feed-header button {
+  flex: 1;
+  background: transparent;
+  color: #6b6b80;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: 'DM Sans', Arial, sans-serif;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 6px;
+  transition: background 0.12s, color 0.12s;
+}
+
+.feed-header button:hover {
+  background: #1e1e2a;
+  color: #c0c0d0;
+}
+
+.feed-header button.active {
+  background: #f03e3e;
+  color: #fff;
+}
+
+/* ── Posts ── */
+.reddit-post {
+  background: #16161d;
+  border: 1px solid #2a2a35;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  transition: border-color 0.15s, transform 0.1s;
+}
+
+.reddit-post:hover {
+  border-color: rgba(240, 62, 62, 0.3);
+  transform: translateY(-1px);
+}
+
+.post-meta {
+  color: #505060;
+  font-size: 12px;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.post-meta .category {
+  color: #f03e3e;
+  font-weight: 600;
+}
+
+.post-id {
+  color: #3a3a48;
+  font-size: 11px;
+  transition: color 0.12s;
+}
+
+.post-id:hover {
+  color: #505060;
+}
+
+.repost-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(77, 171, 247, 0.08);
+  border: 1px solid rgba(77, 171, 247, 0.25);
+  color: #4dabf7;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 4px;
+}
+
+.reddit-post h2 {
+  margin: 0 0 10px;
+  font-family: 'Sora', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #eeeef5;
+  line-height: 1.35;
+}
+
+.reddit-post p {
+  color: #7878a0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.reddit-post img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #2a2a35;
+  margin-top: 12px;
+}
+
+/* ── Post Actions ── */
+.post-actions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.post-actions span,
+.post-actions a {
+  background: #1e1e2a;
+  color: #6b6b80;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.12s, color 0.12s;
+}
+
+.post-actions a:hover {
+  background: #252535;
+  color: #c0c0d0;
+}
+
+.post-actions .vote-up:hover   { color: #f03e3e; }
+.post-actions .vote-down:hover { color: #4dabf7; }
+
+/* ── Original post reference card ── */
+.original-post-card {
+  background: #0f0f13;
+  border: 1px solid #2a2a35;
+  border-left: 3px solid #4dabf7;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  transition: border-color 0.15s;
+}
+
+.original-post-card:hover {
+  border-color: #4dabf7;
+  border-left-color: #4dabf7;
+}
