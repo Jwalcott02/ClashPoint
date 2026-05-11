@@ -63,8 +63,15 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
+<div>
+    <a href="https://www.loom.com/share/1243a35aea7f4ca2956fdb727bcb1376">
+      <p>ClashPoint - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/1243a35aea7f4ca2956fdb727bcb1376">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/1243a35aea7f4ca2956fdb727bcb1376-b8fe746d5b07bca6-full-play.gif#t=0.1">
+    </a>
+  </div>
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Loom
 
