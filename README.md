@@ -6,6 +6,8 @@ This web app: **ClashPoint is a debate forum where users can create debate posts
 
 Time spent: **10** hours spent in total
 
+https://clashpoint-debates.netlify.app/
+
 ## Required Features
 
 The following **required** functionality is completed:
